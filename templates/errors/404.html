@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h1>Ooops! Sorry!</h1>
+                        <p>The painting you requested has not been painted yet!</p>
+                        <p>Why don't you check out one of the other paintings in the meantime!</p>
+                        <p></p>
+                        <p>Error 404 - Page not found</p>
+                        <a href="{% url 'products' %}" class="btn_1 text-white">All paintings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner_img">
+        <img src="{% static 'img/404.webp' %}" alt="Error 404 Page does not exist" class="img-fluid">
+    </div>
+</section>
+{% endblock %}

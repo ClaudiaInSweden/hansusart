@@ -1,0 +1,38 @@
+/* Allauth form formatting */
+form label:not([for='id_remember']) {
+    display: none !important;
+}
+.form-control {
+    font-size: 1rem;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+textarea:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+select:focus {
+    border-color: #795376 !important;
+    box-shadow: 0 1px 3px 0 #795376 !important;
+}
+form input:not(.search-form, [type='checkbox']) {
+    margin-top: 1rem;
+}
+.login_part_form_iner p > a {
+    color: #795376 !important;
+    font-weight: 700;
+    line-height: 25px;
+}
+.signin-lost_pass {
+    text-decoration: none;
+    color: #795376;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+.login_part_form_iner h2 {
+    margin-top: 20px !important;
+}

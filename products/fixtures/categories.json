@@ -1,0 +1,66 @@
+[
+    {
+        "model": "products.category",
+        "pk": 1,
+        "fields": {
+            "name": "landskap",
+            "friendly_name": "Landskap"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "name": "djur",
+            "friendly_name": "Djur"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 3,
+        "fields": {
+            "name": "porträtt",
+            "friendly_name": "Porträtt"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 4,
+        "fields": {
+            "name": "natur",
+            "friendly_name": "Natur"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 5,
+        "fields": {
+            "name": "abstrakt",
+            "friendly_name": "Abstrakt Konst"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 6,
+        "fields": {
+            "name": "impressionism",
+            "friendly_name": "Impressionism"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 7,
+        "fields": {
+            "name": "figurativt",
+            "friendly_name": "Figurativt"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 8,
+        "fields": {
+            "name": "fantasi",
+            "friendly_name": "Fantasi"
+        }
+    }
+]

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Banner Part Start-->
+<section class="py-2">
+<div class="container mt-3">
+    <div class="card-deck">
+        <div class="card text-center">
+            <img src="{% static 'img/hannele.jpg' %}" class="card-img-top card-round mt-3" alt="Om mig">
+            <div class="card-body">
+                <p class="card-title"><a href="{% url 'about' %}">Om mig</a></p>
+                <div class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="{% static 'img/index.jpg' %}" class="card-img-top card-round mt-3" alt="Mina tavlor">
+            <div class="card-body">
+                <!-- <p class="card-title"><a href="{% url 'products' %}">Mina tavlor</a></p> -->
+                <div class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="{% static 'img/utstallning.png' %}" class="card-img-top card-round mt-3" alt="Utställningar">
+            <div class="card-body">
+                <p class="card-title">Utställningar</p>
+                <p class="card-text">
+                    2024-11-09 - 2024-11-29</p>
+                <p><a href="https://elixir.konstforeningar.se/senaste-utstallningar/">Galleri Elixir, Gävle Sjukhus</a>
+                </p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Banner Part End-->
+
+
+{% endblock %}
+{% block carouseljs %}
+<script type="text/javascript">
+    $('.collapse').collapse()
+</script>
+{% endblock %}
