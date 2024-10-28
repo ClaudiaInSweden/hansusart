@@ -189,14 +189,14 @@
     <div class="container">
         <div class="row py-3">
 
-            <a href="{% url 'products' %}?category=natur" class="category-tag"><i class="fa-solid fa-tag"></i> Natur</a>
-            <a href="{% url 'products' %}?category=djur" class="category-tag"><i class="fa-solid fa-tag"></i> Djur</a>
-            <a href="{% url 'products' %}?category=landskap" class="category-tag"><i class="fa-solid fa-tag"></i> Landskap</a>
-            <a href="{% url 'products' %}?category=porträtt" class="category-tag"><i class="fa-solid fa-tag"></i> Porträtt</a>
-            <a href="{% url 'products' %}?category=abstrakt" class="category-tag"><i class="fa-solid fa-tag"></i> Abstrakt Konst</a>
-            <a href="{% url 'products' %}?category=impressionism" class="category-tag"><i class="fa-solid fa-tag"></i> Impressionism</a>
-            <a href="{% url 'products' %}?category=figurativt" class="category-tag"><i class="fa-solid fa-tag"></i> Figurativt</a>
-            <a href="{% url 'products' %}?category=fantasi" class="category-tag"><i class="fa-solid fa-tag"></i> Fantasi</a>
+            <a href="{% url 'products' %}?categories=natur" class="category-tag"><i class="fa-solid fa-tag"></i> Natur</a>
+            <a href="{% url 'products' %}?categories=djur" class="category-tag"><i class="fa-solid fa-tag"></i> Djur</a>
+            <a href="{% url 'products' %}?categories=landskap" class="category-tag"><i class="fa-solid fa-tag"></i> Landskap</a>
+            <a href="{% url 'products' %}?categories=porträtt" class="category-tag"><i class="fa-solid fa-tag"></i> Porträtt</a>
+            <a href="{% url 'products' %}?categories=abstrakt" class="category-tag"><i class="fa-solid fa-tag"></i> Abstrakt Konst</a>
+            <a href="{% url 'products' %}?categories=impressionism" class="category-tag"><i class="fa-solid fa-tag"></i> Impressionism</a>
+            <a href="{% url 'products' %}?categories=figurativt" class="category-tag"><i class="fa-solid fa-tag"></i> Figurativt</a>
+            <a href="{% url 'products' %}?categories=fantasi" class="category-tag"><i class="fa-solid fa-tag"></i> Fantasi</a>
 
 
         </div>
@@ -231,7 +231,8 @@
                                     {{ product.title }}</a></h5>
 
                             <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item">{{ product.categories }}</li>
+                                <!-- <li class="list-group-item">{{ product.categories.all|join:"<br>"}}</li> -->
+                                <li class="list-group-item">{{ product.categories.all|join:"<br>"}}</li>
                                 <li class="list-group-item">{{ product.width }} cm x {{ product.height }} cm</li>
                                 <li class="list-group-item">
                                     {% if product.sold is True %}

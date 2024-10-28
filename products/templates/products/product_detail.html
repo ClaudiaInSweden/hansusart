@@ -32,7 +32,7 @@
     <div class="col-12">
       <div class="single_product_text text-center">
         <h3>{{ product.title }}</h3>
-        <p>{{ product.category.friendly_name }}</p>
+        <p>{{ product.categories.all|join:"<br>" }}</p>
         <hr>
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
