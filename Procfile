@@ -1,1 +1,1 @@
-web: gunicorn hansuart.wsgi:application
+web: gunicorn hansusart.wsgi:application
