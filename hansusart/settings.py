@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure--$hh)1_@^bt)qgo&u389xegwp!ck%h%v(dj72ppo46)8cmaxj*'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io', 'https://hansusart-433db939c4ed.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io', 'hansusart-433db939c4ed.herokuapp.com/']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io', 'https://hansusart-433db939c4ed.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io', 'hansusart-433db939c4ed.herokuapp.com/']
 
 
 # Application definition
