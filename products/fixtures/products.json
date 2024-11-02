@@ -1,0 +1,436 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "title": "Test Tavla",
+            "width": "30",
+            "height": "40",
+            "description": "Category test",
+            "highlight": false,
+            "sold": false,
+            "image": "beauty.webp",
+            "image_url": null,
+            "categories": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "title": "Reindeer",
+            "width": "50",
+            "height": "61",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2953.png",
+            "image_url": null,
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "title": "Grytan",
+            "width": "46",
+            "height": "38",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2965.png",
+            "image_url": null,
+            "categories": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "title": "Kåsa",
+            "width": "48",
+            "height": "38",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2964.png",
+            "image_url": null,
+            "categories": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "title": "Vårlängtan",
+            "width": "24",
+            "height": "33",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2943.png",
+            "image_url": null,
+            "categories": [
+                4,
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "title": "Blind Date",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2938.png",
+            "image_url": null,
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "title": "Fragment",
+            "width": "33",
+            "height": "41",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2960.png",
+            "image_url": null,
+            "categories": [
+                5,
+                8
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "title": "Blomster",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "blomster.webp",
+            "image_url": null,
+            "categories": [
+                4,
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "title": "Misse",
+            "width": "40",
+            "height": "30",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "misse.webp",
+            "image_url": null,
+            "categories": [
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "title": "Bastutant Liisa",
+            "width": "40",
+            "height": "30",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2936.png",
+            "image_url": null,
+            "categories": [
+                3,
+                8
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "title": "Bastutant Irma",
+            "width": "30",
+            "height": "30",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "irma.webp",
+            "image_url": null,
+            "categories": [
+                3,
+                8
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "title": "Akka",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2920.png",
+            "image_url": null,
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "title": "Squaw",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2921.png",
+            "image_url": null,
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "title": "Grace",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2925.png",
+            "image_url": null,
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "title": "Geisha",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2919.png",
+            "image_url": null,
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "title": "Skimmer",
+            "width": "40",
+            "height": "33",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2950.png",
+            "image_url": null,
+            "categories": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "title": "Sommar",
+            "width": "40",
+            "height": "33",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": true,
+            "image": "sommar.webp",
+            "image_url": null,
+            "categories": [
+                4,
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "title": "På Fjället",
+            "width": "46",
+            "height": "37",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "fjallet.webp",
+            "image_url": null,
+            "categories": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "title": "Beauty",
+            "width": "50",
+            "height": "70",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2962.png",
+            "image_url": null,
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "title": "Dining out",
+            "width": "45",
+            "height": "55",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2940.png",
+            "image_url": null,
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "title": "Water Lilies",
+            "width": "24",
+            "height": "30",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2954.png",
+            "image_url": null,
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "title": "Strukturer",
+            "width": "38",
+            "height": "46",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2949.png",
+            "image_url": null,
+            "categories": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "title": "Gårdskär",
+            "width": "50",
+            "height": "70",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2955.png",
+            "image_url": null,
+            "categories": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "title": "The Cafe",
+            "width": "46",
+            "height": "55",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2941.png",
+            "image_url": null,
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "title": "First Wave",
+            "width": "61",
+            "height": "50",
+            "description": "Akryl",
+            "highlight": false,
+            "sold": false,
+            "image": "IMG_E2956.png",
+            "image_url": null,
+            "categories": [
+                1
+            ]
+        }
+    }
+]
