@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb_iner">
-                    <h2 class="text-white">Product Management</h2>
+                    <h2>Product Management</h2>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn_1 text-white" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn_1" type="submit">Add Painting</button>
+                    <a class="btn_art" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn_art" type="submit">Add Painting</button>
                 </div>
             </form>
         </div>
@@ -57,4 +57,14 @@
             $('#filename').text(`Image will be set to: ${file.name}`);
         });
     </script>
+{% endblock %}
+{% block selectscript %}
+<script>
+$(document).ready(function() {
+    $('#id_categories').select2({
+        maximumSelectionLength: 3,
+        placeholder: 'Please select ...'
+    });
+});
+</script>
 {% endblock %}

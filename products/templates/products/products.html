@@ -15,144 +15,7 @@
 </section>
 <!-- Breadcrumb part end-->
 <!-- Product list part start-->
-<!-- <section class="product_list">
-    <div class="container">
-        <div class="row py-3">
-            <div class="col-lg-4 col-sm-4">
-                <div class="dropdown select_option">
-                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth"
-                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Filter by categories">
-                        Kategorier
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?category=natur"
-                            aria-label="Filter by category flowers">Natur</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=djur"
-                            aria-label="Filter by category animals">Djur</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=landskap"
-                            aria-label="Filter by category landscape">Landskap</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=porträtt"
-                            aria-label="Filter by category Porträtt">Porträtt</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=abstrakt"
-                            aria-label="Filter by category abstract">Abstrakt Konst</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=impressionism"
-                            aria-label="Filter by category impressionism">Impressionism</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=figurativt"
-                            aria-label="Filter by category still life">Figurativt</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=fantasi"
-                            aria-label="Filter by category still life">Fantasi</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=platser"
-                            aria-label="Filter by category still life">Platser</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-                <div class="dropdown select_option">
-                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth"
-                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Formats
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Porträtt"
-                            aria-label="Filter by Porträtt format">Porträtt</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Landscape"
-                            aria-label="Filter by landscape format">Landscape</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?format=Square"
-                            aria-label="Filter by square format">Square</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-                <div class="dropdown select_option">
-                    <button class="genric-btn primary circle e-large arrow dropdown-toggle dropdown-button-fullwidth"
-                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        aria-label="Sort by price">
-                        Sort by price
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc"
-                            aria-label="Sort from low to high">Low to high</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc"
-                            aria-label="Sort from high to low">High to low</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-first">
-                <p class="text-muted mt-3 text-center text-md-left">
-                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}" aria-label="All Paintings"><strong>Show all
-                                Paintings </strong></a> |
-                    </span>
-                    {% endif %}
-                    {{ products|length }} Painting(s){% if search_term %} found for
-                    <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    {% for product in products %}
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="single_product_item align-item-flex-end">
-                            {% if product.image %}
-                            <img loading="lazy" src="{{ product.image.url }}"
-                                alt="{{ product.name }} {{ product.technique }}" class="img-fluid">
-                            {% else %}
-                            <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }} {{ product.technique }}"
-                                class="img-fluid">
-                            {% endif %}
-                            <h3><a href="{% url 'product_detail' product.id %}" aria-label="Product Name">
-                                    {{ product.name }}</a>
-                            </h3>
-                            {% if product.category %}
-                            <p><a href="{% url 'products' %}?category={{ product.category.name }}"
-                                    aria-label="Product Category">Category:
-                                    {{ product.category.friendly_name }}</a>
-                            </p>
-                            {% endif %}
-                            <p>Dimension: {{ product.size }}</p>
-                            {% if product.sold is True %}
-                            <p class="text-uppercase"><strong>sold</strong></p>
-                            {% else %}
-                            <p>Price: SEK {{ product.price }}</p>
-                            {% endif %}
-                            <div class="button-group area mt-2">
-                                <span>
-                                    <a href="{% url 'product_detail' product.id %}"
-                                        class="btn_1 text-white small primary-border px-3 py-1" role="button"
-                                        aria-label="Details">Details
-                                    </a>
-                                </span>
-                                {% if request.user.is_superuser %}
-                                <span>
-                                    <a href="{% url 'edit_product' product.id %}"
-                                        class="btn_1 text-white small primary-border px-3 py-1" role="button"
-                                        aria-label="Update">Update
-                                    </a>
-                                </span>
-                                <span>
-                                    <a href="{% url 'delete_product' product.id %}"
-                                        class="btn_1 text-white small primary-border px-3 py-1" role="button"
-                                        aria-label="Delete">Delete
-                                    </a>
-                                </span>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="back-to-top" data-toggle="tooltip" data-original-title="Back to Top">
-        <a class="btt-link h-100" aria-label="Back to Top" href="" onclick="javascript:scrollTo(0, 0)">
-            <i class="fa-regular fa-circle-up"></i>
-        </a>
-    </div>
-</section> -->
+
 
 <!-- Highlight Carousel part start-->
 <div class="container">
@@ -231,8 +94,11 @@
                                     {{ product.title }}</a></h5>
 
                             <ul class="list-group list-group-flush mb-3">
-                                <!-- <li class="list-group-item">{{ product.categories.all|join:"<br>"}}</li> -->
-                                <li class="list-group-item">{{ product.categories.all|join:"<br>"}}</li>
+                                <li class="list-group-item">
+                                    {% for category in product.categories.all %}
+                                    <i class="fa-solid fa-tag pl-1"></i> {{ category.friendly_name }} 
+                                    {% endfor %}</li>
+
                                 <li class="list-group-item">{{ product.width }} cm x {{ product.height }} cm</li>
                                 <li class="list-group-item">
                                     {% if product.sold is True %}

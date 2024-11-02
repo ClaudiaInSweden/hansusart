@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -98,7 +99,7 @@ def edit_product(request, product_id):
                 that the form is valid!')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing painting "{product.name}"')
+        messages.info(request, f'You are editing painting "{product.title}"')
 
     template = 'products/edit_product.html'
     context = {

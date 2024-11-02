@@ -1,6 +1,7 @@
 asgiref==3.8.1
 boto3==1.35.54
 botocore==1.35.54
+crispy-bootstrap4==2024.10
 dj-database-url==2.3.0
 Django==4.2
 django-allauth==65.1.0
