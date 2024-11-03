@@ -97,7 +97,8 @@ a:hover {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    align-items: end;
 }
 
 .navbar-nav {
@@ -116,34 +117,11 @@ a:hover {
     background: none;
 }
 
-/* .navbar-brand>img {
-    padding-left: 10px;
-} */
-/* .logo-font {
-    font-family: "alegreya-sans-sc-bold", sans-serif !important;
-    font-weight: 400;
-    font-style: italic !important;
-    color: #A56039;
-    font-size: 2rem;
-}
-
-.logo-text {
-    text-transform: uppercase;
-    color: #A56039;
-    font-size: 3rem;
-    letter-spacing: -0.1rem;
-} */
-
-/* .logo-subtext {
-    letter-spacing: normal;
-    font-size: 1.3rem;
-} */
 
 .logo-round {
     height: 150px;
     width: 150px;
     margin-right: 1em;
-
 }
 
 .dropdown .dropdown-menu .dropdown-item:focus {
@@ -273,10 +251,6 @@ a:hover {
     margin: 0;
     display: block;
     text-align: center;
-}
-
-.dropdown-menu.show {
-    transform: translate3d(0px, 42px, 0px) !important;
 }
 
 .genric-btn.primary {

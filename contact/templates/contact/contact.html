@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Banner Part Start-->
+<section class="py-2">
+    <div class="container my-5">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Vänligen fyll i kontaktformuläret:</h5>
+                        <div class="card-text">
+                            <form action="{% url 'contact' %}" method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
+                                <span id="current">0</span>
+                                <span id="maximum">/ 1000</span>
+                            </div>
+                            <div class="float-right my-3">
+                                <a class="btn_art" href="{% url 'home' %}">Cancel</a>
+                                <button id="submit-button" class="btn_art" aria-label="Contact us">Skicka</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Part End-->
+
+
+{% endblock %}
+{% block postloadjs %}
+<script>
+$('textarea').keyup(function() {
+    
+    var characterCount = $(this).val().length,
+        current = $('#current'),
+        maximum = $('#maximum'),
+        charCount = $('#char-count');
+      
+    current.text(characterCount);
+
+    if (characterCount >= 901) {
+        maximum.css('color', '#8f0001');
+        current.css('color', '#8f0001');
+        charCount.css('font-weight','bold');
+    } else {
+        maximum.css('color','#666');
+        current.css('color', '#666');
+        charCount.css('font-weight','normal');
+    }
+  
+});
+</script>
+{% endblock %}
