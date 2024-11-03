@@ -92,15 +92,14 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.info(request, 'The painting was updated successfully!')
+            messages.info(request, 'Konstverket har uppdaterats!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update painting! Please ensure \
                 that the form is valid!')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing painting "{product.title}"')
-
+        
     template = 'products/edit_product.html'
     context = {
         'form': form,

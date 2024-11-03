@@ -49,11 +49,7 @@
         {{ form.highlight|as_crispy_field }}
         {{ form.sold|as_crispy_field }}
     </div>
-    <div class="form-group col-md-6 thumbnail">
-        <img src="{{ product.image.url }}"
-        alt="{{ product.title }} {{ product.description }}">
-    </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
         {{ form.image|as_crispy_field }}
     </div>
     

@@ -30,36 +30,39 @@
       </div>
     </div>
     <div class="col-12">
-      <div class="single_product_text text-center">
+      <div class="single_product_text text-center mt-2">
         <h3>{{ product.title }}</h3>
-        <p>{{ product.categories.all|join:"<br>" }}</p>
+        {% for category in product.categories.all %}
+        <i class="fa-solid fa-tag pl-1"></i> {{ category.friendly_name }} 
+        {% endfor %}</li>
         <hr>
+        <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="single_product_text text-center">
               <h4>Format BxH:</h4>
-              <p>{{ product.width }} cm x {{ product.height }} cm</p>
+              {{ product.width }} cm x {{ product.height }} cm
             </div>
           </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="single_product_text text-center">
               <h4>Beskrivning:</h4>
-              <p>{{ product.description }}</p>
+              {{ product.description }}
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-4">
             <div class="single_product_text text-center">
               {% if product.sold is True %}
-              <p class="text-uppercase h4">såld</p>
+              <p class="text-uppercase h5">såld</p>
 
               {% endif %}
             </div>
           </div>
         </div>
+        </div>
         <hr>
         {% if product.sold is True %}
-        <a href="{% url 'products' %}" class="btn_1 text-white m-2" role="button"
+        <a href="{% url 'products' %}" class="btn_art m-2" role="button"
             aria-label="Back to Gallery">Tillbaka till galleriet</a>
         {% else %}
       </div>
@@ -88,9 +91,9 @@
     <div class="col-12">
       <span>
         <div class="btn-group">
-          <a href="{% url 'edit_product' product.id %}" class="btn_1 m-2 text-white" role="button" aria-label="Update"
-            title="Update">Updatera</a>
-          <a href="{% url 'delete_product' product.id %}" class="btn_1 m-2 confirm-delete text-white"
+          <a href="{% url 'edit_product' product.id %}" class="btn_art" role="button" aria-label="Update"
+            title="Update">Editera</a>
+          <a href="{% url 'delete_product' product.id %}" class="btn_art confirm-delete"
             aria-label="Delete" role="button" title="Delete">Ta bort</a>
         </div>
       </span>
