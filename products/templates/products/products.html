@@ -98,13 +98,6 @@
                                     {% for category in product.categories.all %}
                                     <i class="fa-solid fa-tag"> </i> {{ category.friendly_name }}
                                     {% endfor %}</li>
-
-                                <li class="list-group-item">{{ product.width }} cm x {{ product.height }} cm</li>
-                                <li class="list-group-item text-sold">
-                                    {% if product.sold is True %}
-                                    <strong>såld</strong></p>
-                                    {% endif %}
-                                </li>
                             </ul>
                             <div class="btn-group" role="button">
                             <a href="{% url 'product_detail' product.id %}" class="mt-3 btn_art">Visa detaljerna</a>

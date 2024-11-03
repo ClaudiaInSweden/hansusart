@@ -72,17 +72,17 @@
 <div class="container mb-3">
   <div class="row text-center">
     <div class="col-12">
-      <!-- <form class="form" method="POST" action="">
+      <form class="form" method="POST" action="{% url 'inquiry' product.id %}">
         {% csrf_token %}
         <div class="btn-group float-center my-3">
-          <input class="form-control qty-input" type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}"
+          <input class="form-control" type="hidden" data-item_id="{{ product.id }}"
             id="id_qty_{{ product.id }}">
-          <input type="submit" class="btn_1 m-2" aria-label="Skicka Köpförfrågan" value="Köpförfrågan">
-          <a href="{% url 'products' %}" class="btn_1 text-white m-2" role="button"
+          <input type="submit" class="btn_art" aria-label="Skicka Köpförfrågan" value="Köpförfrågan">
+          <a href="{% url 'inquiry' product.id %}" class="btn_art" role="button"
             aria-label="Continue Shopping">Tillbaka till galleriet</a>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
-      </form> -->
+      </form>
     </div>
   </div>
   {% endif %}

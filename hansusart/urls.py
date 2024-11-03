@@ -25,5 +25,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('products/', include('products.urls')),
     path('contact/', include('contact.urls')),
+    path('inquiry/', include('inquiry.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'hansusart.views.handler404'

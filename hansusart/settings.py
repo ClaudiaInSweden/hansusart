@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'contact',
+    'inquiry',
+    'phonenumber_field',
     'crispy_forms',
     'crispy_bootstrap4',
     'storages',
@@ -90,6 +92,8 @@ TEMPLATES = [
         },
     },
 ]
+
+PHONENUMBER_DEFAULT_REGION = 'SE' # Your Prefered Country
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
