@@ -29,35 +29,35 @@
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-<div class="form-row">
-    <div class="form-group col-12">
-        {{ form.categories|as_crispy_field }}
-    </div>
-    <div class="form-group col-12">
-        {{ form.title|as_crispy_field }}
-    </div>
-    <div class="form-group col-md-6">
-        {{ form.width|as_crispy_field }}
-    </div>
-    <div class="form-group col-md-6">
-        {{ form.height|as_crispy_field }}
-    </div>
-    <div class="form-group col-md-6">
-        {{ form.description|as_crispy_field }}
-    </div>
-    <div class="form-group col-md-6">
-        {{ form.highlight|as_crispy_field }}
-        {{ form.sold|as_crispy_field }}
-    </div>
-    <div class="form-group col-md-12">
-        {{ form.image|as_crispy_field }}
-    </div>
-    
-</div>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            {{ form.categories|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-12">
+                            {{ form.title|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.width|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.height|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.description|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.highlight|as_crispy_field }}
+                            {{ form.sold|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-12">
+                            {{ form.image|as_crispy_field }}
+                        </div>
+                    </div>
 
                     <div class="text-right">
                         <a class="btn_art" href="{% url 'products' %}">Cancel</a>
                         <button class="btn_art" type="submit">Update</button>
+                        <a class="btn_art" href="{% url 'delete_product' product.id %}">Ta bort</a>
                     </div>
                 </form>
             </div>
