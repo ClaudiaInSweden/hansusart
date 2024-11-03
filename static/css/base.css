@@ -197,6 +197,9 @@ a:hover {
     .dropdown .dropdown-menu .dropdown-item {
         font-size: 12px;
     }
+    .btn-group {
+        flex-direction: column;
+    }
 }
 
 /* Search form */
@@ -315,13 +318,18 @@ a:hover {
     border: 2px solid #fff;
     border-radius: 10px;
     color: #1f1e1e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0.6em 1em;
     font-size: 85%;
     font-weight: 700;
     vertical-align: middle;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.cat-tag-text {
+    font-weight: 700;
+    font-size: 85%;
+    font-style: italic;
 }
 .category-tag:hover,
 .category-tag:focus {
@@ -340,7 +348,7 @@ a .category-tag {
     border: 2px solid #fff;
     border-radius: 10px;
     color: #1f1e1e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0.5em 0.7em;
     font-size: 85%;
     font-weight: 700;
@@ -407,8 +415,9 @@ hr {
 
 .text-sold {
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 2rem;
+}
+.no-padding {
+    padding: 0rem 0rem !important;
 }
 label {
     font-size: larger;

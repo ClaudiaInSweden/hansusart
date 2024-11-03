@@ -56,15 +56,16 @@
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Logout
+                                <a class="nav-link dropdown-toggle" href="" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Administration
                                 </a>
-                                <div class="dropdown-menu" id="navbarDropdown_3">
+                                <div class="dropdown-menu" id="navbarDropdown_2">
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Lägg till konstverk</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                </div>
-                                {% endif %}
 
+                                {% endif %}
+                                </div>
                             </li>
                         </ul>
                     </div>
