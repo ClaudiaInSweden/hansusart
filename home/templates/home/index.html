@@ -6,30 +6,38 @@
 <section class="py-2">
 <div class="container mt-3">
     <div class="card-deck">
+        
         <div class="card text-center">
+            <a href="{% url 'about' %}">
             <img src="{% static 'img/hannele.jpg' %}" class="card-img-top card-round mt-3" alt="Om mig">
             <div class="card-body">
-                <p class="card-title"><a href="{% url 'about' %}">Om mig</a></p>
+                <p class="card-title">Om mig</p>
                 <div class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
             </div>
+            </a>
         </div>
+        
         <div class="card text-center">
+            <a href="{% url 'products' %}">
             <img src="{% static 'img/index.jpg' %}" class="card-img-top card-round mt-3" alt="Mina tavlor">
             <div class="card-body">
-                <p class="card-title"><a href="{% url 'products' %}">Konstverk</a></p>
+                <p class="card-title">Konstverk</p>
                 <div class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
             </div>
+            </a>
         </div>
         <div class="card text-center">
+            <a href="https://elixir.konstforeningar.se/senaste-utstallningar/" aria-label="Exhibitions" target="_blank" rel="noopener">
             <img src="{% static 'img/utstallning.png' %}" class="card-img-top card-round mt-3" alt="Utställningar">
             <div class="card-body">
                 <p class="card-title">Utställningar</p>
                 <p class="card-text">
                     2024-11-09 - 2024-11-29</p>
-                <p><a href="https://elixir.konstforeningar.se/senaste-utstallningar/">Galleri Elixir, Gävle Sjukhus</a>
+                <p>Galleri Elixir, Gävle Sjukhus
                 </p>
                 </p>
             </div>
+            </a>
         </div>
     </div>
 </div>
