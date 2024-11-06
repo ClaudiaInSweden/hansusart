@@ -1,19 +1,18 @@
 {% load static %}
-<header class="main_menu home_menu">
+
+<!-- <header class="main_menu home_menu"> -->
     <div class="container">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-            <a class="navbar-brand mr-auto justify-content-center" href="{% url 'home' %}">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-offcanvas">
+            <a class="navbar-brand mr-auto" href="{% url 'home' %}">
                 <img src="{% static 'img/logo1.png' %}" class="logo-round" alt="Hansus Art">
             </a>
-            <button class="navbar-toggler d-block" type="button">
+            <button class="navbar-toggler d-block" type="button" id="navToggle">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse offcanvas-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}"><span class="sr-only">(current)</span>
-                            Home
-                        </a>
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'products' %}">
@@ -27,14 +26,14 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted" href="" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle text-muted" href="" data-toggle="dropdown" id="dropdown01"
                             aria-haspopup="true" aria-expanded="false">
                             Administration
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Lägg till
-                                konstverk</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="{% url 'add_product' %}">Lägg till
+                                tavla</a>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                         </div>
                     </li>
                     {% endif %}
@@ -42,30 +41,30 @@
             </div>
         </nav>
     </div>
-</header>
+<!-- </header> -->
 
-{% block navbarjs %}
+{% block navjs %}
 <script>
-$(document).ready(function() {
-    // executes when HTML-Document is loaded and DOM is ready
-   console.log("document is ready");
-     
-     
-       $('[data-toggle="offcanvas"], #navToggle').on('click', function () {
-       $('.offcanvas-collapse').toggleClass('open')
-     })
-     
-     
-   // document ready  
-   });
-   
-   
-   window.onload = function() {
-    // executes when complete page is fully loaded, including all frames, objects and images
-   console.log("window is loaded");
-     
-     
-   // window load  
-   };
+    $(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+console.log("document is ready");
+  
+  
+    $('[data-toggle="offcanvas"], #navToggle').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+  
+  
+// document ready  
+});
+
+
+window.onload = function() {
+ // executes when complete page is fully loaded, including all frames, objects and images
+console.log("window is loaded");
+  
+  
+// window load  
+};
 </script>
 {% endblock %}
