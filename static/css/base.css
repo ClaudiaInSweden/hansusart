@@ -16,7 +16,7 @@ html {
 
 body {
     color: #1f1e1e !important;
-    background-color: #F2F2F2;
+    background-image: linear-gradient(#f2f2f2, #BBB8B8);
     font-family: "Roboto", sans-serif !important;
     color: #1f1e1e;
     font-size: 1rem;
@@ -28,7 +28,6 @@ body {
     position: relative;
     margin: 0;
     box-sizing: inherit;
-    padding-top: 150px;
 }
 
 i,
@@ -68,6 +67,14 @@ a:hover {
 /* Navigation bar */
 .navbar {
     box-shadow: none;
+}
+
+.fixed-top {
+    position: sticky !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 /* .navbar-light .navbar-brand {
@@ -129,7 +136,7 @@ a:hover {
     top: 50px;
     bottom: 0;
     left: 100%;
-    right: -300px;
+    right: 300px;
     width: 300px;
     width: 300px;
     padding-right: 1rem;
@@ -142,7 +149,7 @@ a:hover {
     transition-property: right, visibility;
 }
 .offcanvas-collapse {
-    align-items:start;
+    align-items:send;
 /*   Adds a subtle drop shadow   */
               -moz-background-clip: padding;     /* Firefox 3.6 */
           -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
