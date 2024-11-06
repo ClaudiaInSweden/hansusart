@@ -17,6 +17,9 @@ html {
 body {
     color: #1f1e1e !important;
     background-image: linear-gradient(#f2f2f2, #BBB8B8);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "Roboto", sans-serif !important;
     color: #1f1e1e;
     font-size: 1rem;
@@ -349,6 +352,7 @@ a:hover {
 
 .tooltip-inner {
     background-color: #F2F2F2 !important;
+    color: #1f1e1e;
 }
 
 .product-divider {
@@ -356,7 +360,7 @@ a:hover {
 }
 
 .category-tag {
-    background-color: #A5A5A5;
+    background-color: #bbb8b8;
     border: 2px solid #cccccc;
     border-radius: 10px;
     color: #1f1e1e;
@@ -386,12 +390,12 @@ a .category-tag {
     border-radius: 10px;
 }
 .btn_art {
-    background-color: #a5a5a5;
+    background-color: #bbb8b8;
     border: 2px solid #cccccc;
     border-radius: 10px;
     color: #1f1e1e;
     font-family: 'Roboto', sans-serif;
-    padding: 0.5em 0.7em;
+    padding: 0.3em 0.7em;
     font-size: 1rem;
     font-weight: 700;
     vertical-align: middle;
@@ -687,10 +691,12 @@ i {
     border: 0 !important;
     border-radius: 10px;
     box-shadow: none !important;
-    background-color: #cccccc;
+    background-color: #f2f2f2;
     align-items: center;
 }
-
+.card-deck {
+    gap: 5px;
+}
 .card-title {
     font-family: "Roboto", cursive;
     font-size: 1.1rem;
