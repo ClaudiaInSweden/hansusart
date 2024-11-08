@@ -24,6 +24,11 @@
                             Om mig
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'terms' %}">
+                            Köpinformation
+                        </a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" href="" data-toggle="dropdown" id="dropdown01"
