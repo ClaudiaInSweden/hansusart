@@ -2,21 +2,21 @@
 
 <!-- <header class="main_menu home_menu"> -->
     <div class="container">
+
         <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-offcanvas">
+            
             <a class="navbar-brand mr-auto" href="{% url 'home' %}">
                 <img src="{% static 'img/logo1.png' %}" class="logo-round" alt="Hansus Art">
             </a>
+            <!-- <div> -->
             <button class="navbar-toggler d-block" type="button" id="navToggle">
-                <span class="navbar-toggler-icon"></span>
+                <span><i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="navbar-collapse offcanvas-collapse">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'products' %}">
-                            Tavlor
+                            Tavlor <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -44,11 +44,13 @@
                     {% endif %}
                 </ul>
             </div>
+            <!-- </div> -->
         </nav>
     </div>
 <!-- </header> -->
 
 {% block navjs %}
+
 <script>
     $(document).ready(function() {
  // executes when HTML-Document is loaded and DOM is ready

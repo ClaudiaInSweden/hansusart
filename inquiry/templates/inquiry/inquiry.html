@@ -4,7 +4,7 @@
 {% block content %}
 <!-- Banner Part Start-->
 <section>
-    <div class="container inquiryform mx-auto mb-3 p-4">
+    <div class="container inquiryform mx-auto my-4 p-4">
         <form action="{% url 'inquiry' product.id %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <h3 class="my-3">Köpförfrågan</h3>
@@ -14,7 +14,7 @@
                     <div class="col-4">
                         <img loading="lazy" src="{{ product.image.url }}" alt="{{ product.title }}"
                             class="img-thumbnail">
-                        <h4>{{ product.title }}</h4>
+                        <h5>{{ product.title }}</h5>
                     </div>
                     <div class="col-8">
                         <fieldset>

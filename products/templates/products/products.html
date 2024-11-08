@@ -42,14 +42,13 @@
             {% endfor %}
         </div>
     </div>
-    <hr class="my-3 product-divider">
 </div>
 
 <!-- Highlight Carousel part end-->
 
 <!-- All Products part start-->
 <section class="product_list mb-3">
-    <div class="container">
+    <div class="container my-4">
         <div class="row py-3">
 
             <a href="{% url 'products' %}?categories=natur" class="category-tag"><i class="fa-solid fa-tag"></i> Natur</a>
@@ -67,13 +66,12 @@
         <div class="row">
             <div class="col-12 col-md-6 order-md-first">
                 <p class="text-muted mt-3 text-center text-md-left">
-                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                    {% if current_categories != 'None_None' %}
                     <span class="small"><a href="{% url 'products' %}" aria-label="All Paintings"><strong>Visa alla tavlor </strong></a> |
                     </span>
                     {% endif %}
-                    {{ products|length }} Tavlor{% if search_term %} hittat
-                    <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
+                    {{ products|length }} Tavlor
+                                </p>
             </div>
         </div>
         <div class="container">

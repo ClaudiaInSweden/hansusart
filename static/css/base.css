@@ -21,7 +21,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: "Roboto", sans-serif !important;
-    color: #1f1e1e;
     font-size: 1rem;
     font-weight: 400;
     font-style: normal;
@@ -80,26 +79,6 @@ a:hover {
     z-index: 1030;
 }
 
-/* .navbar-light .navbar-brand {
-    color: #A56039;
-    font-family: "Roboto", sans-serif !important;
-    font-style: italic !important;
-    font-weight: 400;
-    line-height: 0.7;
-    margin-top: 10px;
-} */
-
-/* .main_menu a i {
-    margin-left: 5px !important;
-}
-
-.main-menu-item {
-    justify-content: flex-end;
-}
-
-.main_menu .main-menu-item ul li .nav-link {
-    justify-content: flex-end;
-} */
 
 .navbar-toggler {
     font-size: 1.5rem;
@@ -110,13 +89,10 @@ a:hover {
     font-weight: 500;
     text-align: right;
     font-size: 1.5rem;
-    align-items: end;
-    line-height: 1rem !important;
+    /* align-items: end; */
+    line-height: 0.8rem !important;
 }
 
-/* .navbar-nav {
-    text-align: end;
-} */
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1rem;
 }
@@ -137,24 +113,24 @@ a:hover {
 } */
 .offcanvas-collapse {
     position: fixed;
-    top: 56px; /* Height of navbar */
+    top: 150px; /* Height of navbar */
     bottom: 0;
-    right: 0;
-    width: 250px;
-    height: 150px;
+    /* right: 3px; */
+    width: 220px;
+    height: 90px;
     border-radius: 10px;
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
-    background-image: linear-gradient(to left, rgb(242, 242, 242, 1), rgb(204, 204, 204, 0));
+    background-image: linear-gradient(to right, rgb(242, 242, 242, 1), rgb(204, 204, 204, 0));
     transition-timing-function: ease-in-out;
     transition-duration: .3s;
     transition-property: left, visibility;
   }
 
   .offcanvas-collapse {
-      align-items:start;
+      align-items:flex-end;
 /*   Adds a subtle drop shadow   */
     			-moz-background-clip: padding;     /* Firefox 3.6 */
 			-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
@@ -168,7 +144,10 @@ a:hover {
   .offcanvas-collapse.open {
     /* left: 0; */
     /* right: 20px; */
+    top: 115px;
     visibility: visible;
+    align-items:flex-start;
+    display: inline-block;
   }
 
 
@@ -234,6 +213,29 @@ a:hover {
     background-color: #F2F2F2 !important;
 }
 
+@media (max-width: 576px) {
+    .logo-round {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offcanvas-collapse {
+        right: 3px;
+    }
+}
+@media (max-width: 640px) {
+    .offcanvas-collapse {
+        right: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .offcanvas-collapse {
+        right: 25px;
+    }
+}
+
 @media (max-width: 991px) {
     .logo {
         display: none;
@@ -242,7 +244,9 @@ a:hover {
     .logo-text a {
         display: none;
     }
-
+    .offcanvas-collapse {
+        right: 20px;
+    }
     .header-container {
         padding-top: 116px;
     }
@@ -264,6 +268,18 @@ a:hover {
         font-size: 12px !important;
         line-height: 10px !important;
     }
+}
+
+@media (max-width: 1200px) {
+    .offcanvas-collapse {
+        right: 35px;
+    }
+}
+@media (min-width: 1280px) {
+    .offcanvas-collapse {
+        right: 75px;
+    }
+}
 
     /* .nav-item+.dropdown+.show {
         font-size: 12px !important;
