@@ -2,22 +2,20 @@
 
 <!-- <header class="main_menu home_menu"> -->
 <div class="container">
-    <nav class="navbar navbar-light navbar-expand-sm">
+    <nav class="navbar navbar-light navbar-expand">
         <a class="navbar-brand" href="{% url 'home' %}">
             <img src="{% static 'img/logo1.png' %}" class="logo-round" alt="Hansus Art">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbar-list-4">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbar-list-4">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-bars"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <button type="button" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{% url 'products' %}">
                             Tavlor</a>
                         <a class="dropdown-item" href="{% url 'about' %}">
@@ -39,52 +37,10 @@
                 </li>
             </ul>
         </div>
+
     </nav>
 </div>
 
-<!-- <div class="container">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-offcanvas">
-        <a class="navbar-brand mr-auto" href="{% url 'home' %}">
-            <img src="{% static 'img/logo1.png' %}" class="logo-round" alt="Hansus Art">
-        </a>
-        <button class="navbar-toggler d-block" type="button" id="navToggle">
-            <span><i class="fa-solid fa-bars"></i></span>
-        </button>
-        <div class="navbar-collapse offcanvas-collapse">
-            <ul class="navbar-nav right">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'products' %}">
-                        Tavlor <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">
-                        Om mig
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'terms' %}">
-                        Köpinformation
-                    </a>
-                </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-muted" href="" data-toggle="dropdown" id="dropdown01"
-                        aria-haspopup="true" aria-expanded="false">
-                        Administration
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="{% url 'add_product' %}">Lägg till
-                            tavla</a>
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                    </div>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
-</div> -->
-<!-- </header> -->
 
 {% block navjs %}
 

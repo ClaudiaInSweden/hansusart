@@ -81,10 +81,10 @@ a:hover {
 .fa-bars {
     font-size: 2rem;
 }
-
+/* 
 .navbar-toggler {
     font-size: 1.5rem;
-}
+} */
 
 .dropdown-item {
     font-family: "Alegreya Sans SC", sans-serif;
@@ -107,6 +107,16 @@ a:hover {
 .dropdown-item.hover, .dropdown-item:hover {
     background: none;
 }
+.dropdown-box {
+    background-image: linear-gradient(to right, rgb(242, 242, 242, 1), rgb(204, 204, 204, 0));
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+}
+.navbar-toggle {
+    display: none;
+}
+
 
 /* @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .dropdown-menu {
