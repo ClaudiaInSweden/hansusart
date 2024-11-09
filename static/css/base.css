@@ -71,20 +71,22 @@ a:hover {
     box-shadow: none;
 }
 
-.fixed-top {
+/* .fixed-top {
     position: sticky !important;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
+} */
+.fa-bars {
+    font-size: 2rem;
 }
-
 
 .navbar-toggler {
     font-size: 1.5rem;
 }
 
-.nav-link {
+.dropdown-item {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 500;
     text-align: right;
@@ -111,11 +113,11 @@ a:hover {
         position: unset;
     }
 } */
-.offcanvas-collapse {
+/* .offcanvas-collapse {
     position: fixed;
-    top: 115px; /* Height of navbar */
+    top: 115px; 
     bottom: 0;
-    /* right: 3px; */
+    right: 3px;
     width: 220px;
     height: 90px;
     border-radius: 10px;
@@ -127,7 +129,7 @@ a:hover {
     transition-timing-function: ease-in-out;
     transition-duration: .3s;
     transition-property: left, visibility;
-  }
+  } */
 
   .offcanvas-collapse {
       align-items:flex-end;
@@ -141,23 +143,23 @@ a:hover {
 
 
 /* Makes the nav visibile with the open class */
-  .offcanvas-collapse.open {
-    /* left: 0; */
-    /* right: 20px; */
+  /* .offcanvas-collapse.open {
+    left: 0; 
+    right: 20px;
     top: 115px;
     visibility: visible;
     align-items:flex-start;
     display: inline-block;
-  }
+  } */
 
-
+/* 
 .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
 
-.nav-scroller {
+/* .nav-scroller {
   position: relative;
   z-index: 2;
   height: 2.75rem;
@@ -176,9 +178,9 @@ a:hover {
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-}
+} */
 
-.nav-underline .nav-link {
+/* .nav-underline .nav-link {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: .875rem;
@@ -192,7 +194,7 @@ a:hover {
 .nav-underline .active {
   font-weight: 500;
   color: #a5a5a5;
-}
+} */
 
 
 .logo-round {
