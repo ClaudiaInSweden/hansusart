@@ -369,9 +369,9 @@ label {
 /* Toasts container */
 .message-container {
     position: fixed;
-    top: 140px;
-    margin-left: 50px;
-    width: 350px;
+    top: 100px;
+    left: calc(50vw - 160px);
+    width: 320px;
     z-index: 5000;
 }
 
