@@ -124,19 +124,11 @@ WSGI_APPLICATION = 'hansusart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 if 'DATABASE_URL' in os.environ:
-    tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
-
     DATABASES = {
-        'default': {
-            'NAME': tmpPostgres.path.replace('/', ''),
-            'USER': tmpPostgres.username,
-            'PASSWORD': tmpPostgres.password,
-            'HOST': tmpPostgres.hostname,
-            'PORT': 5432,
-        }
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-
 else:
     DATABASES = {
         'default': {
@@ -144,21 +136,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
-
-# Replace the DATABASES section of your settings.py with this
-# tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
-
-# DATABASES = {
-#   'default': {
-#     'ENGINE': 'django.db.backends.sqlite3',
-#     'NAME': getenv('PGDATABASE'),
-#     'USER': getenv('PGUSER'),
-#     'PASSWORD': getenv('PGPASSWORD'),
-#     'HOST': getenv('PGHOST'),
-#     'PORT': getenv('PGPORT', 5432),
-#   }
-# }
 
 
 # Password validation
