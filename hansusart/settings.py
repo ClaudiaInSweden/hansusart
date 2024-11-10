@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','https://hansusart-433db939c4ed.herokuapp.com', 'http://www.hansusart.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','hansusart-433db939c4ed.herokuapp.com', 'www.hansusart.com']
 
@@ -136,6 +136,7 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
 
 
 # Password validation
