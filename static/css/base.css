@@ -361,7 +361,6 @@ label {
 .thumbnail {
     max-width: 120px;
     max-height: 120px;
-
 }
 
 
@@ -495,11 +494,13 @@ label {
     font-size: 1.2rem;
 }
 
-
 .card-header {
     border: 1px solid #C3BABA !important;
     border-radius: 10px !important;
     background-color: #faf9fa !important;
+}
+.no-line {
+    text-decoration: none;
 }
 
 /* Contact form */
