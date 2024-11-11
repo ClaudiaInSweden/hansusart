@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Inquiry
+from products.models import Product
 
 
 class InquiryForm(forms.ModelForm):

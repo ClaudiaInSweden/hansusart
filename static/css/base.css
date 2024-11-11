@@ -499,7 +499,7 @@ label {
     border-radius: 10px !important;
     background-color: #faf9fa !important;
 }
-.no-line {
+a.no-line {
     text-decoration: none;
 }
 

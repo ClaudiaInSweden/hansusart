@@ -10,14 +10,12 @@
             <h3 class="my-3">Köpförfrågan</h3>
             <h6 class="text-muted mb-3">* Obligatoriskt fält</h6>
             <div class="row">
-
-                    <div class="col-4">
-                        <img loading="lazy" src="{{ product.image.url }}" alt="{{ product.title }}"
-                            class="img-thumbnail">
-                        <h5>{{ product.title }}</h5>
-                    </div>
-                    <div class="col-8">
-                        <fieldset>
+                <div class="col-4">
+                    <img loading="lazy" src="{{ product.image.url }}" alt="{{ product.title }}" class="img-thumbnail">
+                    <h5>{{ product.title }}</h5>
+                </div>
+                <div class="col-8">
+                    <fieldset>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <h5>Förnamn *</h5>
@@ -38,45 +36,46 @@
                                 {{ form.phone_number|as_crispy_field }}
                             </div>
                         </div>
-                </fieldset>
-                <fieldset>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <h5>Gatuadress</h5>
-                            {{ form.street1|as_crispy_field }}
-                            <h5>Adresstillägg</h5>
-                            {{ form.street2|as_crispy_field }}
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <h5>Gatuadress</h5>
+                                {{ form.street1|as_crispy_field }}
+                                <h5>Adresstillägg</h5>
+                                {{ form.street2|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                <h5>Postnummer</h5>
+                                {{ form.postcode|as_crispy_field }}
+                                <h5>Postort</h5>
+                                {{ form.city|as_crispy_field }}
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <h5>Postnummer</h5>
-                            {{ form.postcode|as_crispy_field }}
-                            <h5>Postort</h5>
-                            {{ form.city|as_crispy_field }}
-                        </div>
-                    </div>
-                </fieldset>
-                    </div>
+                    </fieldset>
+                </div>
             </div>
-                <div class="row">
-                    <div class="col-4">
-                        
-                    </div>
-                        <div class="col-md-8">
-                            <fieldset>
-                                <h5>Ditt meddelande *</h5>
-                                {{ form.message|as_crispy_field }}
-                                <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
-                                    <span id="current">0</span>
-                                    <span id="maximum">/ 1000</span>
-                                </div>
-                                <div class="float-right my-3">
-                                    <a class="btn_art" href="{% url 'product_detail' product.id %}">Cancel</a>
-                                    <button id="submit-button" class="btn_art" aria-label="Inquiry">Skicka</button>
-                                </div>
-                            </fieldset>
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-md-8">
+                    <fieldset>
+                        <h5>Ditt meddelande *</h5>
+                        {{ form.message|as_crispy_field }}
+                        <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
+                            <span id="current">0</span>
+                            <span id="maximum">/ 1000</span>
                         </div>
-                    </div>
-
+                        <input type="hidden" name="product_title" value="{{ product }}">
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        <div class="float-right my-3">
+                            <a class="btn_art" href="{% url 'product_detail' product.id %}">Cancel</a>
+                            <button id="submit-button" class="btn_art"
+                                aria-label="Inquiry">Skicka</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
         </form>
     </div>
 </section>
@@ -96,12 +95,12 @@ $('textarea').keyup(function() {
     current.text(characterCount);
 
     if (characterCount >= 901) {
-        maximum.css('color', '#1f1e1e');
-        current.css('color', '#1f1e1e');
+        maximum.css('color', '#ff0000');
+        current.css('color', '#ff0000');
         charCount.css('font-weight','bold');
     } else {
-        maximum.css('color','#666');
-        current.css('color', '#666');
+        maximum.css('color','#1f1e1e');
+        current.css('color', '#1f1e1e');
         charCount.css('font-weight','normal');
     }
   

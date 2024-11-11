@@ -10,11 +10,16 @@ from django.template.loader import render_to_string
 def inquiry(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-    redirect_url = request.POST.get('redirect_url')
+    # redirect_url = request.POST.get('redirect_url')
     if request.method == 'POST':
-        form = InquiryForm(request.POST, instance=product)
+        form = InquiryForm(request.POST)
         if form.is_valid():
-            form.save()
+            print('form is valid')
+            inquiry = form.save(commit=False)
+            inquiry.product = product
+            inquiry.save()
+
+            
             first_name = form.cleaned_data.get('first_name')
             last_name = form.cleaned_data.get('last_name')
             email = form.cleaned_data.get('email')
@@ -24,7 +29,6 @@ def inquiry(request, product_id):
             postcode = form.cleaned_data.get('postcode')
             city = form.cleaned_data.get('city')
             message = form.cleaned_data.get('message')
-            painting = request.POST.get('product')
             send_to = ['claudiavomwalde@gmail.com',]
 
             html = render_to_string('inquiry/emails/inquiryform.html', {
@@ -37,23 +41,24 @@ def inquiry(request, product_id):
                 'postcode': postcode,
                 'city': city,
                 'message': message,
-                'painting': painting,
+                'product': product,
             })
 
             send_mail('HannelesArt Köpförfrågan', 'Meddelande', 'claudiavomwalde@gmail.com', ['claudiavomwalde@gmail.com'], html_message=html) 
 
-
             messages.info(request, 'Tack för ditt meddelande!')
             return redirect(reverse('product_detail', args=[product.id]))
+
         else:
             messages.error(request, 'Formuläret kunde inte sändes. Vänligen kontrollera att allt är ifyllt korrekt.')
-            form = InquiryForm(instance=product)
+            form = InquiryForm()
     else:
-        form = InquiryForm(instance=product)
+        form = InquiryForm()
 
     template = 'inquiry/inquiry.html'
     context = {
         'form': form,
         'product': product,
     }
+    
     return render(request, template, context)

@@ -1,8 +1,9 @@
 <h2>Köpförfrågan</h2>
-<h4>för tavla: {{ product }}</h4>
+
+<h4>för tavla: {{ product.title }}</h4>
 <p></p>
 <p><strong>Name:</strong>
-    <p></p>{{ first_name }} {{ last_name}}</p>
+    <p></p>{{ first_name }} {{ last_name }}</p>
 <p><strong>Email:</strong>
     <p></p>{{ email }}</p>
     <p><strong>Telefonnummer:</strong>
@@ -12,4 +13,4 @@
     <p></p>{{ street2 }}</p>
     <p></p>{{ postcode }} {{ city }}</p>
 <p><strong>Meddelande:</strong>
-    <p></p>{{ content }}</p>
+    <p></p>{{ message|linebreaks }}</p>
