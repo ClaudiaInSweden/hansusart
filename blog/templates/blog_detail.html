@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for post in blogposts %}
+        {{ blog.title }}
+        {{ blog.intro }}
+        {{ blog.text }}
+        {{ blog.date }}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
