@@ -3,14 +3,24 @@
 
 {% block content %}
 
-<div class="container">
+
+<div class="container mt-3">
     <div class="row">
-        {% for post in blogposts %}
-        {{ blog.title }}
-        {{ blog.intro }}
-        {{ blog.text }}
-        {{ blog.date }}
-        {% endfor %}
+        <div class="card blog-card mb-3 w-75">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-fluid pr-3">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body pr-4">
+                  <p class="h4 pb-2">{{ blog.title }}</p>
+                  <p class="h6 intro">{{ blog.intro }}</p>
+                  <p class="card-text">{{ blog.text|safe }}</p>
+                  <p class="card-text"><small class="text-muted">{{ blog.date }}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 </div>
 

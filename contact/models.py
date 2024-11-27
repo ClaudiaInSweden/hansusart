@@ -6,10 +6,10 @@ class Contact(models.Model):
     class Meta:
         ordering = ['-date']
 
-    name = models.CharField(max_length=255, null=True, blank=True)
-    email = models.EmailField(max_length=254, null=True)
+    name = models.CharField(max_length=255, blank=False, null=False)
+    email = models.EmailField(max_length=254, blank=False, null=False)
     topic = models.CharField(max_length=255, null=True, blank=True)
-    message = models.TextField(max_length=1000,null=True, blank=True)
+    message = models.TextField(max_length=1000, blank=False, null=False)
     date = models.DateTimeField(auto_now_add=True)
     answered = models.BooleanField(default=False)
 

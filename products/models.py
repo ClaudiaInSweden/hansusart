@@ -7,7 +7,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    friendly_name = models.CharField(max_length=254)
 
     def __str__(self):
         return self.name
@@ -19,13 +19,13 @@ class Category(models.Model):
 class Product(models.Model):
 
     categories = models.ManyToManyField(Category)
-    title = models.CharField(max_length=254)
-    width = models.CharField(max_length=254)
-    height = models.CharField(max_length=254)
-    description = models.CharField(max_length=254)
+    title = models.CharField(max_length=254, blank=False, null=False)
+    width = models.CharField(max_length=254, blank=False, null=False)
+    height = models.CharField(max_length=254, blank=False, null=False)
+    description = models.CharField(max_length=254, blank=False, null=False)
     highlight = models.BooleanField(default=False)
     sold = models.BooleanField(default=False)
-    image = models.ImageField()
+    image = models.ImageField(blank=False, null=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def __str__(self):

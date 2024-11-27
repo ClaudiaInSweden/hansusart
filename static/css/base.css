@@ -495,12 +495,29 @@ label {
 }
 
 .card-header {
-    border: 1px solid #C3BABA !important;
     border-radius: 10px !important;
-    background-color: #faf9fa !important;
+    background-color: transparent !important;
+    border: none;
+}
+.list-group-item {
+    background: none;
 }
 a.no-line {
     text-decoration: none;
+}
+
+/* Blog Cards */
+.blog-card {
+    align-items: start !important;
+}
+.painting-image {
+    float: left;
+    margin: 5px;
+}
+.intro {
+    font-style: italic;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 /* Contact form */

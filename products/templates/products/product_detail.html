@@ -22,7 +22,7 @@
         <div class="single_product_img pb-2">
           {% if product.image %}
           <a href="{{ product.image.url }}" target="_blank"><img src="{{ product.image.url }}"
-              alt="{{ product.title }} {{ product.description }}" class="img-fluid painting-image"></a>
+              alt="{{ product.title }} {{ product.description }}" class="img-fluid"></a>
           {% else %}
           <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.title }} {{ product.description }}" class="img-fluid">
           {% endif %}
