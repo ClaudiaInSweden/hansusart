@@ -507,17 +507,20 @@ a.no-line {
 }
 
 /* Blog Cards */
-.blog-card {
-    align-items: start !important;
-}
+
 .painting-image {
-    float: left;
-    margin: 5px;
+    align-items: start;
 }
 .intro {
     font-style: italic;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+.img-round {
+    border-radius: 10px;
+}
+.blog-card {
+    display: block;
 }
 
 /* Contact form */

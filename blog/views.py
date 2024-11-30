@@ -8,6 +8,7 @@ from .forms import BlogForm
 # Create your views here.
 class BlogView(ListView):
     model = Blog
+    queryset = Blog.objects.filter(status='Published')
     template_name = 'blog.html'
 
 
@@ -15,39 +16,6 @@ class BlogDetailView(DetailView):
     model = Blog
     template_name = 'blog_detail.html'
 
-
-# def blog(request):
-
-#     blog = Blog.objects.all()
-   
-#     context = {
-#         'blog': blog,
-#     }
-
-#     return render(request, 'blog.html', context)
-
-
-# def blog_detail(request, blog_id):
-
-#     blogpost = get_object_or_404(Blog, pk=blog_id)
-
-#     context = {
-#         'blogpost': blogpost,
-#     }
-
-#     return render(request, 'blog_detail.html', context)
-
-
-# def category_list(request, cats):
-
-#     blog_category = Blog.objects.filter(categories=cats)
-
-#     context = {
-#         'cats': cats,
-#         'blog_category': blog_category,
-#     }
-
-#     return render(request, 'categories.html', context)
 
 
 def add_blogpost(request):
@@ -60,7 +28,7 @@ def add_blogpost(request):
         if form.is_valid():
             blogpost = form.save()
             messages.success(request, 'The blog post has been added successfully!')
-            return redirect(reverse('blog_detail', args=[blogpost.id]))
+            return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             messages.error(request, 'Failed to add blogpost! Please make sure \
                 that the form is valid!')

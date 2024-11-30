@@ -27,12 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','https://hansusart-433db939c4ed.herokuapp.com', 'http://www.hansusart.com']
+CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','https://hansusart-433db939c4ed.herokuapp.com', 'http://www.hansusart.com', 'https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu117.gitpod.io']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','hansusart-433db939c4ed.herokuapp.com', 'www.hansusart.com']
+ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','hansusart-433db939c4ed.herokuapp.com', 'www.hansusart.com', '8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu117.gitpod.io']
 
 
 # Application definition
