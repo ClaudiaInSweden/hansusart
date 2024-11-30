@@ -92,7 +92,7 @@ h4 {
     font-size: large;
 }
 a.dropdown-item:hover {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .navbar-toggle {
@@ -105,8 +105,6 @@ button {
 a.dropdown-item:focus {
     background-color: #BBB8B8;
 }
-
-
 
 .logo-round {
     height: 175px;
@@ -246,7 +244,7 @@ a.dropdown-item:focus {
     color: #1f1e1e;
 }
 
-
+/* Category styling */
 .category-tag {
     background-color: #bbb8b8;
     border: 2px solid #cccccc;
@@ -298,10 +296,6 @@ a .category-tag {
     font-size: 16px !important;
 }
 
-.btn-3 {
-    padding: 12px;
-}
-
 .btn-group .btn_1 {
     display: inline-block;
     width: 17em;
@@ -332,20 +326,12 @@ hr {
     border: 1px solid #7f7f7f;
 }
 
-.add_to_cart p {
-    margin: 5px;
-}
-
 .single_product_img img {
     max-height: 500px !important;
 }
 
 .product_image_area .single_product_text {
     margin: 10px 0 10px !important;
-}
-
-.price {
-    margin-top: 10px !important;
 }
 
 .text-sold {
@@ -372,12 +358,6 @@ label {
     left: calc(50vw - 160px);
     width: 320px;
     z-index: 5000;
-}
-
-.cart-notification-wrapper {
-    height: 95px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .toast {
@@ -417,16 +397,7 @@ label {
     padding: 50px 0px;
 }
 
-.cart-notification-wrapper>.btn_3 {
-    background-color: transparent;
-    border: 1px solid #cccccc;
-    color: #cccccc;
-}
 
-.cart-notification-wrapper>.btn_3:hover {
-    background-color: #cccccc;
-    color: #7f7f7f;
-}
 
 .text-info {
     color: #7f7f7f !important;

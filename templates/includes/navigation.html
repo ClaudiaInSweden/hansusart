@@ -20,6 +20,8 @@
                             Tavlor</a>
                         <a class="dropdown-item" href="{% url 'about' %}">
                             Om mig</a>
+                        <a class="dropdown-item" href="{% url 'blog' %}">
+                            Aktuellt</a>
                         <a class="dropdown-item" href="{% url 'terms' %}">
                             Köpinformation</a>
                         {% if user.is_authenticated %}
@@ -30,6 +32,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{% url 'add_product' %}">Lägg till
                                 tavla</a>
+                            <a class="dropdown-item" href="{% url 'add_blogpost' %}">Lägg till
+                                blogpost</a>
                             <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                         </div>
                         {% endif %}
