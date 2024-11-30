@@ -18,6 +18,16 @@
                   <p class="card-text">{{ blog.text|safe|linebreaksbr }}</p>
                   <p class="float-right text-uppercase pt-5"><small class="text-muted"><a href="{% url 'blog' %}"><i class="fa-solid fa-backward pr-2"></i>Tillbaka</a></small></p>
                   <p class="card-text pt-5"><small class="text-muted">{{ blog.date }}</small></p>
+                  {% if request.user.is_superuser %}
+                  <span>
+                    <div class="btn-group">
+                      <a href="{% url 'edit_blogpost' blog.id %}" class="btn_art" role="button" aria-label="Update"
+                        title="Update">Uppdatera</a>
+                      <a href="{% url 'delete_blogpost' blog.id %}" class="btn_art confirm-delete" aria-label="Delete"
+                        role="button" title="Delete">Ta bort</a>
+                    </div>
+                  </span>
+              {% endif %}
                 </div>
               </div>
             </div>

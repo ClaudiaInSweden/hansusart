@@ -68,3 +68,19 @@ def edit_blogpost(request, post_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_blogpost(request, post_id):
+    """ Delete a painting """
+    if not request.user.is_superuser:
+        messages.error(request, 'You are not authorized to perform this task.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Blog, pk=post_id)
+    if request.method == 'POST':
+        post.delete()
+        messages.info(request, 'The blogpost has been deleted!')
+        return redirect('blog')
+    context = {'post': post}
+    return render(request, 'delete_blogpost.html', context)
