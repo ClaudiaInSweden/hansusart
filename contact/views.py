@@ -15,7 +15,7 @@ def contact(request):
             content = form.cleaned_data.get('message')
             email = form.cleaned_data.get('email')
             name = form.cleaned_data.get('name')
-            send_to = ['claudiavomwalde@gmail.com',]
+            send_to = ['hannelesartwork@gmail.com',]
 
             html = render_to_string('contact/emails/contactform.html', {
                 'name': name,

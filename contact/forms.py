@@ -1,11 +1,15 @@
 from django import forms
 from .models import Contact
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV2Checkbox
 
 
 class ContactForm(forms.ModelForm):
+    captcha = ReCaptchaField()
+
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'topic', 'message',)
+        fields = ('name', 'email', 'topic', 'message', 'captcha',)
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control',
                                            'aria-label': 'Name',
@@ -20,6 +24,7 @@ class ContactForm(forms.ModelForm):
                                              'aria-label': 'Message',
                                              'rows': 8,
                                              'placeholder': 'Meddelande'}),
+            'captcha': ReCaptchaField(widget=ReCaptchaV2Checkbox()),
         }
 
     def __init__(self, *args, **kwargs):

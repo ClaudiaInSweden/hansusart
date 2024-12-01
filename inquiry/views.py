@@ -29,7 +29,7 @@ def inquiry(request, product_id):
             postcode = form.cleaned_data.get('postcode')
             city = form.cleaned_data.get('city')
             message = form.cleaned_data.get('message')
-            send_to = ['claudiavomwalde@gmail.com',]
+            send_to = ['hannelesartwork@gmail.com',]
 
             html = render_to_string('inquiry/emails/inquiryform.html', {
                 'first_name': first_name,

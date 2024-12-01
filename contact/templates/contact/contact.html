@@ -12,15 +12,20 @@
                         <div class="card-text">
                             <form action="{% url 'contact' %}" method="POST">
                             {% csrf_token %}
-                            {{ form|crispy }}
-                            <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mb-5 mx-auto">
+                            {{ form.name|as_crispy_field }}
+                            {{ form.email|as_crispy_field }}
+                            {{ form.topic|as_crispy_field }}
+                            {{ form.message|as_crispy_field }}
+                            <div id="char-count" class="text-right col-12 col-lg-6 order-lg-last mx-auto">
                                 <span id="current">0</span>
                                 <span id="maximum">/ 1000</span>
                             </div>
-                            <div class="float-right my-3">
-                                <a class="btn_art" href="{% url 'home' %}">Cancel</a>
+                            {{ form.captcha }}
+                            <div class="float-right my-5">
+                                <a class="btn_art" href="{% url 'home' %}">Avbryt</a>
                                 <button id="submit-button" class="btn_art" aria-label="Contact us">Skicka</button>
                             </div>
+
                             </form>
                         </div>
                     </div>

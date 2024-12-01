@@ -228,11 +228,15 @@ a.dropdown-item:focus {
 .genric-btn.e-large {
     padding-left: 10px !important;
 }
-
-.back-to-top {
+.icons-upp-home {
     position: fixed;
     bottom: 25px;
     right: 25px;
+    align-items: center;
+}
+
+.back-to-home i {
+    font-size: 30px;
 }
 
 .back-to-top i {
@@ -509,6 +513,10 @@ a.no-line {
     font-size: 1rem;
     font-weight: 500;
     color: #C3BABA;
+}
+.recaptchav2checkbox {
+    background-color: transparent !important;
+    border: none;
 }
 
 /* Footer  */

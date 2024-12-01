@@ -68,8 +68,9 @@
                         </div>
                         <input type="hidden" name="product_title" value="{{ product }}">
                         <input type="hidden" name="product_id" value="{{ product.id }}">
-                        <div class="float-right my-3">
-                            <a class="btn_art" href="{% url 'product_detail' product.id %}">Cancel</a>
+                        {{ form.captcha }}
+                        <div class="float-right my-5">
+                            <a class="btn_art" href="{% url 'product_detail' product.id %}">Avbryt</a>
                             <button id="submit-button" class="btn_art"
                                 aria-label="Inquiry">Skicka</button>
                         </div>

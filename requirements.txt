@@ -7,6 +7,7 @@ Django==4.2
 django-allauth==65.1.0
 django-crispy-forms==2.3
 django-phonenumber-field==8.0.0
+django-recaptcha==4.0.0
 django-storages==1.14.4
 gunicorn==23.0.0
 jmespath==1.0.1

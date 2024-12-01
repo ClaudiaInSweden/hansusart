@@ -117,10 +117,17 @@
 
         </div>
     </div>
-    <div class="back-to-top" data-toggle="tooltip" data-original-title="Back to Top">
+    <div class="icons-upp-home">
+    <div class="back-to-top pb-2" data-toggle="tooltip" data-original-title="Tillbaka upp">
         <a class="btt-link h-100" aria-label="Back to Top" href="" onclick="javascript:scrollTo(0, 0)">
             <i class="fa-regular fa-circle-up"></i>
         </a>
+    </div>
+    <div class="back-to-home" data-toggle="tooltip" data-original-title="Till startsidan">
+        <a class="btt-link h-100" aria-label="Till startsidan" href="{% url 'home' %}">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
     </div>
 </section>
 <!-- All products part end-->

@@ -1,9 +1,16 @@
 from django.shortcuts import render, redirect
+from blog.models import Blog, Category
 
 # Create your views here.
 def index(request):
 
-    return render(request, 'home/index.html')
+    posts = Blog.objects.filter(highlight='True')
+
+    context= {
+        'posts': posts,
+    }
+
+    return render(request, 'home/index.html', context)
 
 
 def about(request):

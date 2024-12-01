@@ -2,9 +2,13 @@ from django import forms
 from django.forms import ModelForm
 from .models import Inquiry
 from products.models import Product
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV2Checkbox
 
 
 class InquiryForm(forms.ModelForm):
+    captcha = ReCaptchaField()
+
     class Meta:
         model = Inquiry
         fields = '__all__'
