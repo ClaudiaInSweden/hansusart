@@ -17,7 +17,6 @@ class BlogDetailView(DetailView):
     template_name = 'blog_detail.html'
 
 
-
 def add_blogpost(request):
     if not request.user.is_superuser:
         messages.error(request, 'You are not authorized to perform this task!')

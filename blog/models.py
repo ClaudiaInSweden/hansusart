@@ -30,6 +30,7 @@ class Blog(models.Model):
     status = models.CharField(choices=STATUS, default='Draft', max_length=254)
     image = models.ImageField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
+    blog_url = models.URLField(max_length=1024, null=True, blank=True)
     date = models.DateField(auto_now_add=True)
     highlight = models.BooleanField(default=False)
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)

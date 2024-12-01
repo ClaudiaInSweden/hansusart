@@ -3,17 +3,18 @@ from django.core.exceptions import ValidationError
 from .models import Blog, Category
 
 
-choices = Category.objects.all().values_list('name', 'name')
-
-choice_list = []
-
-for item in choices:
-    choice_list.append(item)
+choices = [
+    ('Events', 'Events'),
+    ('Nya Tavlor', 'Nya Tavlor'),
+    ('Blog', 'Blog'),
+]
 
 class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = '__all__'
         widgets = {
-            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'})
+            'category': forms.Select(choices=choices, attrs={'class': 'form-control'}),
+            'blog_url': forms.URLInput(attrs={'class': 'form-control',
+                                       'placeholer': 'Lägg till länk till extern webbplats'})
         }

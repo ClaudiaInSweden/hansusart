@@ -21,7 +21,7 @@
                     <p class="card-text pt-3"><small class="text-muted">{{ post.date }}</small></p>
                     {% if request.user.is_superuser %}
                     <div class="pt-5">
-                        <a href="{% url 'edit_blogpost' post.id %}" class="btn_art">Uppdatera</a>
+                        <a href="{% url 'edit_blogpost' post.id %}" class="btn_art" id="no-line">Uppdatera</a>
                     </div>
                     {% endif %}
                 </div>

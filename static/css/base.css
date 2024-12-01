@@ -291,7 +291,16 @@ a .category-tag {
     font-weight: 700;
     vertical-align: middle;
     text-decoration: none;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
+}
+#no-line:hover,
+#no-line:focus,
+#no-line:active {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+a .btn_art {
+    text-decoration: none !important;
 }
 
 /* Product details page */
@@ -477,7 +486,7 @@ label {
 .list-group-item {
     background: none;
 }
-a.no-line {
+#no-line {
     text-decoration: none;
 }
 
