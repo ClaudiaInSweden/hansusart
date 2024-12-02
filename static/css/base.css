@@ -506,6 +506,10 @@ label {
 .blog-card {
     display: block;
 }
+.share-btn {
+    background-color: #1877f2 !important;
+    color: #fff !important;
+}
 
 /* Contact form */
 #char-count {

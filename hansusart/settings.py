@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 import dj_database_url
 from urllib.parse import urlparse
-from os import getenv
-from dotenv import load_dotenv
+import dotenv
+# from os import getenv
+# from dotenv import load_dotenv, find_dotenv
 
 
 from pathlib import Path
@@ -219,12 +220,14 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 
-if 'DEVELOPMENT' in os.environ:
-    SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
-    RECAPTCHA_SITE_KEY = str(os.environ.get('RECAPTCHA_SITE_KEY'))
-    RECAPTCHA_SECRET_KEY = str(os.environ.get('RECAPTCHA_SECRET_KEY'))
-else:
-    RECAPTCHA_SECRET_PROD = str(os.environ.get('RECAPTCHA_SECRET_PROD'))
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
+SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
+RECAPTCHA_SITE_KEY = str(os.environ.get('RECAPTCHA_SITE_KEY'))
+RECAPTCHA_SECRET_KEY = str(os.environ.get('RECAPTCHA_SECRET_KEY'))
+
 
 
 

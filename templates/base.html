@@ -60,12 +60,16 @@
     <script src="https://kit.fontawesome.com/aec9602b9e.js" defer></script>
     <!-- Owl Carousel -->
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- Facebook Share -->
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
+        nonce="L23WhqAw"></script>
     {% endblock %}
 
     <title>Hansu's Art</title>
 </head>
 
 <body>
+
     <!-- Navigation start -->
     {% include 'includes/navigation.html' %}
     <!--Navigation end-->
@@ -117,6 +121,12 @@
     {% endblock %}
 
     {% block pagination %}
+    {% endblock %}
+
+    {% block facebook %}
+        <!-- Facebook share script -->
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+        nonce="jOsXbYlm"></script>
     {% endblock %}
 
 </body>
