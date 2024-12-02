@@ -219,9 +219,12 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 
-SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
-RECAPTCHA_SITE_KEY = str(os.environ.get('RECAPTCHA_SITE_KEY'))
-RECAPTCHA_SECRET_KEY = str(os.environ.get('RECAPTCHA_SECRET_KEY'))
+if 'DEVELOPMENT' in os.environ:
+    SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
+    RECAPTCHA_SITE_KEY = str(os.environ.get('RECAPTCHA_SITE_KEY'))
+    RECAPTCHA_SECRET_KEY = str(os.environ.get('RECAPTCHA_SECRET_KEY'))
+else:
+    RECAPTCHA_SECRET_PROD = str(os.environ.get('RECAPTCHA_SECRET_PROD'))
 
 
 
