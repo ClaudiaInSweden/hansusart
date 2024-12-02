@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block og-caption %}
+{{ blog.title }}
+{% endblock %}
+
+{% block og-description %}
+{{ blog.intro }}
+{% endblock %}
+
+{% block og-image %}
+{{ blog.image.url }}
+{% endblock %}
+
 {% block content %}
 
 
@@ -17,8 +29,8 @@
             <p class="h6 intro">{{ blog.intro }}</p>
             <p class="card-text">{{ blog.text|safe|linebreaksbr }}</p>
             {% if blog.blog_url %}
-            <p class="card-text"><a href="{{ blog.blog_url }}" target="_blank" rel="noopener">Länk:<br>{{ blog.blog_url
-                }}</p></a>
+            <p class="card-text"><a href="{{ blog.blog_url }}" target="_blank" rel="noopener">Länk: <br>
+              {{ blog.blog_url }}</p></a>
             {% endif %}
             <div class="float-right">
               <p class="float-right text-uppercase pt-5"><small class="text-muted"><a href="{% url 'blog' %}"><i
