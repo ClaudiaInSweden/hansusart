@@ -5,7 +5,7 @@ from django_recaptcha.widgets import ReCaptchaV2Checkbox
 
 
 class ContactForm(forms.ModelForm):
-    captcha = ReCaptchaField()
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
     class Meta:
         model = Contact
@@ -24,7 +24,6 @@ class ContactForm(forms.ModelForm):
                                              'aria-label': 'Message',
                                              'rows': 8,
                                              'placeholder': 'Meddelande'}),
-            'captcha': ReCaptchaField(widget=ReCaptchaV2Checkbox()),
         }
 
     def __init__(self, *args, **kwargs):

@@ -44,7 +44,7 @@ def inquiry(request, product_id):
                 'product': product,
             })
 
-            send_mail('HannelesArt Köpförfrågan', 'Meddelande', 'claudiavomwalde@gmail.com', ['claudiavomwalde@gmail.com'], html_message=html) 
+            send_mail('HannelesArt Köpförfrågan', 'Meddelande', 'hannelesartwork@gmail.com', ['hannelesartwork@gmail.com'], html_message=html) 
 
             messages.info(request, 'Tack för ditt meddelande!')
             return redirect(reverse('product_detail', args=[product.id]))

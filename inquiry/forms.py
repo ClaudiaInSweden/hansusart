@@ -7,7 +7,7 @@ from django_recaptcha.widgets import ReCaptchaV2Checkbox
 
 
 class InquiryForm(forms.ModelForm):
-    captcha = ReCaptchaField()
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
     class Meta:
         model = Inquiry

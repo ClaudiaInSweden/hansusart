@@ -24,7 +24,7 @@ def contact(request):
                 'content': content
             })
 
-            send_mail('HannelesArt Kontaktformulär', 'Meddelande', 'claudiavomwalde@gmail.com', ['claudiavomwalde@gmail.com'], html_message=html) 
+            send_mail('HannelesArt Kontaktformulär', 'Meddelande', 'hannelesartwork@gmail.com', ['hannelesartwork@gmail.com'], html_message=html) 
             messages.info(request, 'Tack för ditt meddelande!')
             return redirect('home')
     else:
