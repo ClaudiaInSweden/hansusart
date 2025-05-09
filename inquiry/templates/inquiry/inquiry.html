@@ -68,11 +68,12 @@
                         </div>
                         <input type="hidden" name="product_title" value="{{ product }}">
                         <input type="hidden" name="product_id" value="{{ product.id }}">
-                        {{ form.captcha }}
+                        <div class="mb-5">
+                            {{ form.captcha }}
+                        </div>
                         <div class="float-right my-5">
                             <a class="btn_art" href="{% url 'product_detail' product.id %}">Avbryt</a>
-                            <button id="submit-button" class="btn_art"
-                                aria-label="Inquiry">Skicka</button>
+                            <button id="submit-button" class="btn_art" aria-label="Inquiry">Skicka</button>
                         </div>
                     </fieldset>
                 </div>
@@ -86,28 +87,28 @@
 {% endblock %}
 {% block postloadjs %}
 <script>
-$('textarea').keyup(function() {
-    
-    var characterCount = $(this).val().length,
-        current = $('#current'),
-        maximum = $('#maximum'),
-        charCount = $('#char-count');
-      
-    current.text(characterCount);
+    $('textarea').keyup(function () {
 
-    if (characterCount >= 901) {
-        maximum.css('color', '#ff0000');
-        current.css('color', '#ff0000');
-        charCount.css('font-weight','bold');
-    } else {
-        maximum.css('color','#1f1e1e');
-        current.css('color', '#1f1e1e');
-        charCount.css('font-weight','normal');
-    }
-  
-});
+        var characterCount = $(this).val().length,
+            current = $('#current'),
+            maximum = $('#maximum'),
+            charCount = $('#char-count');
+
+        current.text(characterCount);
+
+        if (characterCount >= 901) {
+            maximum.css('color', '#ff0000');
+            current.css('color', '#ff0000');
+            charCount.css('font-weight', 'bold');
+        } else {
+            maximum.css('color', '#1f1e1e');
+            current.css('color', '#1f1e1e');
+            charCount.css('font-weight', 'normal');
+        }
+
+    });
 </script>
 {% endblock %}
 {% block recaptcha %}
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}

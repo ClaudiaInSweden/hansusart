@@ -30,7 +30,7 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io','hansusart-433db939c4ed.herokuapp.com', 'www.hansusart.com', '8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu116.gitpod.io', '8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu118.gitpod.io','hansusart-433db939c4ed.herokuapp.com', 'www.hansusart.com', '8000-claudiainswed-hansusart-7fcbf0s413g.ws-eu117.gitpod.io']
 
 
 # Application definition
