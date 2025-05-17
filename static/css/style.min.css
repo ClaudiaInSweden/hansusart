@@ -97,11 +97,11 @@ h3 {
     line-height: 25px
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     h3 {
         font-size: 20px
     }
-}
+} */
 
 h5 {
     font-size: 18px;
@@ -1588,9 +1588,9 @@ h2 {
     line-height: 1.5
 }
 
-h3 {
+/* h3 {
     font-size: 24px
-}
+} */
 
 h4 {
     font-size: 18px

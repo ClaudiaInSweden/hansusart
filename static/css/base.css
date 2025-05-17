@@ -306,7 +306,13 @@ a .btn_art {
 /* Product details page */
 .single_product_item p {
     /* line-height: 1.2; */
-    font-size: 16px !important;
+    font-size: 1rem !important;
+}
+h3 {
+    font-size: 1.2rem !important;
+}
+h4, h5 {
+    font-size: 1rem !important;
 }
 
 .btn-group .btn_1 {

@@ -1,2 +1,5 @@
 User-agent: *
+Disallow: /admin/
+Allow: /
+
 Sitemap: https://www.hansusart.com/sitemap.xml

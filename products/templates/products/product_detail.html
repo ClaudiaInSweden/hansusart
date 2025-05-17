@@ -94,9 +94,8 @@
               <div class="btn-group float-center my-3">
                 <!-- <input class="form-control" type="hidden" data-item_id="{{ product.id }}">
                 <input type="submit" class="btn_art" aria-label="Skicka Köpförfrågan" value="Köpförfrågan"> -->
-                <a href="{% url 'inquiry' product.id %}" class="btn_art m-2" id="no-line" role="button" aria-label="Back to Gallery">Köpförfrågan</a>
-                <a href="{% url 'products' %}" class="btn_art m-2" id="no-line" role="button" aria-label="Back to Gallery">Tillbaka
-                  till galleriet</a>
+                <a href="{% url 'inquiry' product.id %}" class="btn_art m-1" id="no-line" role="button" aria-label="Köpförfrågan">Köpförfrågan</a>
+                <a href="{% url 'products' %}" class="btn_art m-1" id="no-line" role="button" aria-label="Back to Gallery">Tillbaka</a>
               </div>
 
               {% endif %}
